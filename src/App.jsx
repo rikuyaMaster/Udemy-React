@@ -1,16 +1,14 @@
+import ColorfulMessage from "./components/ColorfulMessage";
+
 const App = () => {
   // ボタンを押されたら
   const onClickButton = () => alert();
-  // cssのスタイル
-  const contentStyle = {
-    color: "blue",
-    // キャメルケースで大文字で記載
-    fontSize: "32px"
-  };
   return (
     <>
-      <h1 style={contentStyle}>Hello World</h1>
-      <p>How are you?</p>
+      <h1>皆さん初めまして</h1>
+      {/* Proposの記載方法(値の受け渡し) */}
+      <ColorfulMessage color="blue" message="お元気ですか?" />
+      <ColorfulMessage color="pink" message="元気です" />
       <button onClick={onClickButton}>ボタン</button>
     </>
   );
