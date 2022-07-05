@@ -1,13 +1,28 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+// 新規の書き方
+// import { StrictMode } from "react";
+// import ReactDom from "react-dom";
 
-import App from "./App";
+// import App from "./App";
 
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
+// ReactDom.render(
+//   <StrictMode>
+//     <App />
+//   </StrictMode>,
+//   document.getElementById("root")
+// );
 
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+// --------------ここから講義--------------
+// 現在はReactのインポートの書き方は不要
+// import React from "react";
+import ReactDom from "react-dom";
+
+const App = () => {
+  return (
+    <>
+      <h1>Hello World</h1>
+      <p>How are you?</p>
+    </>
+  );
+};
+
+ReactDom.render(<App />, document.getElementById("root"));
